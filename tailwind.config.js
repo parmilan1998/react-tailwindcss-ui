@@ -9,6 +9,9 @@ module.exports = {
           Cinzel:["Cinzel"],
           Poppins:["Poppins"]
         },
+        maxWidth: {
+          '8xl': '1408px',
+        }
     },
   },
   plugins: [],

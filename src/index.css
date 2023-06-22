@@ -6,5 +6,9 @@
 @tailwind utilities;
 
 .anger{
-    @apply text-slate-500 text-lg hover:bg-green-500 px-4 py-2 hover:rounded-full hover:text-white transform ease-in-out duration-300
+    @apply text-slate-500 text-base hover:bg-blue-500 px-4 py-2.5 hover:rounded-full hover:text-white transform ease-in-out duration-300
+}
+
+.page{
+    @apply text-slate-500 text-base hover:text-blue-500 px-4 py-2.5
 }
