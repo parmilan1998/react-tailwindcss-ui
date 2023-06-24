@@ -1,21 +1,43 @@
 import React from 'react'
 
 const Appbar = () => {
+  const menuClicked = () => {
+    console.log('Menu Clicked')
+  }
+
   return (
     <nav className=''>
-      <div className=' text-center font-Poppins p-2 bg-blue-700 text-md text-white'>
+      <div className=' text-center font-Poppins p-2 bg-blue-700 text-md text-white '>
         Creativity is always on our menu.
       </div>
-      <div className='flex justify-between max-w-full px-5 py-2 m-1 mx-auto'>
-        <div className='flex'>
+      <div className='lg:flex justify-between max-w-full px-5 py-2 m-1 mx-auto'>
+        <div className='flex justify-between'>
           <div>
             <a href='/home'>
               <span className='text-4xl font-bold text-blue-500'>Quick</span>
               <span className=' text-4xl font-thin text-stone-500'>Start</span>
             </a>
           </div>
-          <div className='ml-8'>
-            <ul className='flex space-x-4'>
+          <div className='lg:hidden mt-3'>
+            <button onClick={menuClicked}>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                fill='none'
+                viewBox='0 0 24 24'
+                strokeWidth={1.5}
+                stroke='currentColor'
+                className='w-6 h-6'
+              >
+                <path
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                  d='M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5'
+                />
+              </svg>
+            </button>
+          </div>
+          <div className='ml-8 hidden lg:block'>
+            <ul className='flex space-x-2'>
               <li className='page'>
                 <a href='/fastfood' className='font-Poppins'>
                   Fast Food
@@ -34,8 +56,8 @@ const Appbar = () => {
             </ul>
           </div>
         </div>
-        <div>
-          <ul className='flex space-x-4'>
+        <div className='hidden lg:block'>
+          <ul className='flex space-x-2'>
             <li className='anger'>
               <a href='/sign-in' className='font-Poppins'>
                 Sign in
